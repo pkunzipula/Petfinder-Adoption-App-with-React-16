@@ -20,7 +20,11 @@
   },
   "homepage": "https://github.com/pkunzipula/reactoid#readme",
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.16.4"
   },
