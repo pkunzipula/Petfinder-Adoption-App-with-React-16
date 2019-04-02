@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 class Pet extends React.Component {
   render() {
     const { name, animal, breed, media, location } = this.props;
     let photos = [];
-    if (media && media.photos & media.photos.photo) {
+    let hero = "https://via.placeholder.com/300.png/09f/fff";
+    if (media && media.photos && media.photos.photo) {
       photos = media.photos.photo.filter(photo => photo["@size"] === "pn");
     }
-    let hero = "http://placecorgi.com/300/300";
     if (photos[0] && photos[0].value) {
       hero = photos[0].value;
     }

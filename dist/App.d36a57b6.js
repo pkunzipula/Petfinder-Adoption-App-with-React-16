@@ -25799,14 +25799,13 @@ function (_React$Component) {
           media = _this$props.media,
           location = _this$props.location;
       var photos = [];
+      var hero = "https://via.placeholder.com/300.png/09f/fff";
 
-      if (media && media.photos & media.photos.photo) {
+      if (media && media.photos && media.photos.photo) {
         photos = media.photos.photo.filter(function (photo) {
           return photo["@size"] === "pn";
         });
       }
-
-      var hero = "http://placecorgi.com/300/300";
 
       if (photos[0] && photos[0].value) {
         hero = photos[0].value;
@@ -27849,7 +27848,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56535" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55545" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
