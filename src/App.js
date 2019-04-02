@@ -17,6 +17,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
+    petfinder.breed.list({ animal: 'dog' }).then(console.log, console.error);
     petfinder.pet
       .find({ location: "Seattle, WA", output: "full" })
       .then(data => {
@@ -39,14 +40,24 @@ class App extends React.Component {
     return (
       <div>
         <h1>Adopt-a Mia!</h1>
+        {/* <pre>
+          <code>{JSON.stringify(this.state, null, 2)}</code>
+        </pre> */}
         {this.state.pets.map(pet => {
+          let breed;
+          if (Array.isArray(pet.breeds.breed)) {
+            breed = pet.breeds.breed.join(", ");
+          } else {
+            breed = pet.breeds.breed;
+          }
           return (
             <Pet
               key={pet.id}
               name={pet.name}
               animal={pet.animal}
-              breed={pet.breed}
-              desc={pet.description}
+              breed={breed}
+              media={pet.media}
+              location={`${pet.contact.city}, ${pet.contact.state}`}
             />
           )
         })}
