@@ -37,7 +37,7 @@ class Results extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="search">
                 {/* <pre>
             <code>{JSON.stringify(this.state, null, 2)}</code>
           </pre> */}

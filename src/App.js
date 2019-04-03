@@ -7,13 +7,16 @@ import Details from "./Details";
 class App extends React.Component {
   render() {
     return (
-      <header>
-        <Link to="/">Adopt-a Mia!</Link>
+      <div>
+        <header>
+          <Link to="/">Adopt-a Mia</Link>
+        </header>
         <Router>
           <Results path="/" />
           <Details path="/details/:id" />
         </Router>
-      </header>
+      </div>
+
     );
   }
 }
